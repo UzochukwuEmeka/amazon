@@ -1,5 +1,5 @@
+import { Outlet } from 'react-router-dom'
 import './App.css'
-import { sampleProduct } from './data'
 
 function App() {
   return (
@@ -7,19 +7,7 @@ function App() {
       <header>
         Ts Amazon
         <main>
-          <ul>
-            {sampleProduct.map((product) => (
-              <li key={product.id}>
-                {product.title}
-                <img
-                  src={product.images[0]}
-                  alt="image"
-                  className="product-image"
-                />
-                <p>{product.price}</p>
-              </li>
-            ))}
-          </ul>
+          <Outlet />
         </main>
         <footer> </footer>
       </header>
